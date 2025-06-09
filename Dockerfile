@@ -9,7 +9,9 @@ WORKDIR /app
 COPY . .
 
 # Compile the Java code
-RUN javac Main.java
+RUN javac src/Main.java
+
 
 # Run the Java application when the container starts
-CMD ["java", "Main"]
+CMD ["java", "-cp", "src", "Main"]
+
